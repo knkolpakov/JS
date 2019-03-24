@@ -41,13 +41,14 @@ class Item {
         { name: 'Чехол', price: 4000 },
       ];
 
-      this.items = this.items.map(item => new Item(item.name, item.price)); // РјР°СЃСЃРёРІ СЃРѕСЃС‚РѕСЏС‰РёР№ РёР· СЌРєР·РµРјРїР»СЏСЂРѕРІ РєР»Р°СЃСЃР° Item
+      this.items = this.items.map(item => new Item(item.name, item.price)); 
     }
 
     render() {
       const itemsHtmls = this.items.map(item => item.render());
       return itemsHtmls.join('');
     } 
+    // Добавил подсчет стоимости товаров
     count(){
         let count = 0;
         for (let i = 0; this.items.length > i; i++){
