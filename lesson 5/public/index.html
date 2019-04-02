@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Shop</title>
+</head>
+
+<body>
+  <div id="app">
+    <header>
+      <input type="text" v-model="searchQuery" class="search-text" />
+      <button class="search-button" @click="handleSearchClick">Поиск</button>
+      <button class="cart-button"  @click="VisibleCart">Корзина</button>
+      
+    </header>
+    <main>
+        <div class="cart" v-bind:style="{display: isVisibleCart}">
+            <div class="cart-list">
+              <div>Корзина</div>
+              <div v-for="item in cart" class="item">
+                <h2>Товар</h2>
+                <span>{{item.price}}</span>
+              </div>
+            </div>
+            <div class="cart-total"></div>
+            <div class="cart-next"></div>
+          </div>
+
+      <div class="goods">
+        <div>Товары</div>
+        <div v-for="item in filteredItems" class="item">
+          <h2>{{item.name}}</h2>
+          <span>{{item.price}}</span>
+        </div>
+      </div>
+
+      
+    </main>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.min.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
