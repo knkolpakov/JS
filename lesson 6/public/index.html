@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Shop</title>
+</head>
+
+<body>
+  <div id="app">
+    <header>
+      <search v-model="searchQuery"></search>
+      <button class="search-button" @click="handleSearchClick">Поиск</button>
+      <button class="cart-button" @click="VisibleCart">Корзина</button>
+    </header>
+    <main>
+      <cart :cart="cart" :visible="isVisibleCart"></cart>
+      
+      <div>Общая стоимость: {{ total }}</div>
+      <products :query="filterValue" @onbuy="handleBuyClick"></products>
+    </main>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.min.js"></script>
+  <script src="app.js"></script>
+</body>
+
+</html>
