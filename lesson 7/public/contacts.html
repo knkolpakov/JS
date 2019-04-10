@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Contacts</title>
+</head>
+
+<body>
+  <ul id="contacts"></ul>
+  <button id="add">Add</button>
+  <script>
+    const $contacts = document.querySelector('#contacts');
+    const $add = document.querySelector('#add');
+
+    $contacts.addEventListener('click', (event) => {
+      if (event.target.classList.contains('remove')) {
+        if (confirm('Are u sure?')) {
+          const id = event.target.dataset.id;
+
+          fetch(`/users/${id}`, { method: 'DELETE' })
+            .then(() => {
+              $contacts.removeChild(event.target.parentElement);
+            });
+        }
+      }
+    });
+
+    $add.addEventListener('click', () => {
+      const name = prompt('Input name');
+      const phone = prompt('Input phone');
+
+      fetch('/users', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ name, phone }),
+      })
+        .then((response) => response.json())
+        .then((item) => {
+          $contacts.innerHTML += `<li>${item.name}: ${item.phone} <button class="remove" data-id="${item.id}">x</button></li>`;
+        })
+    });
+
+    fetch('/users')
+      .then((response) => response.json())
+      .then((items) => {
+        $contacts.innerHTML = items.map((item) => `<li>${item.name}: ${item.phone} <button class="remove" data-id="${item.id}">x</button></li>`).join('');
+      });
+  </script>
+</body>
+
+</html>
