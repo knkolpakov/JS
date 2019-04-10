@@ -1,0 +1,20 @@
+<html>
+  <head>
+    <title>Vue</title>
+  </head>
+  <body>
+    <div id="app">
+      <input type="text" v-model="name" />
+      <h2 v-if="name.length">Hello, {{ transformedName }}</h2>
+      <ul>
+        <li v-for="item in dbs">
+          <h4>{{ item.title }}</h4>
+          <span>({{ item.weight }})</span>
+        </li>
+      </ul>
+      <button @click="handleButtonClick">Click me!</button>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
