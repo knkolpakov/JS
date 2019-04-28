@@ -1,0 +1,170 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "phone": "4343543",
+      "name": "Vasya Pupkin",
+      "username": "vasya",
+      "password": "123456"
+    },
+    {
+      "id": 3,
+      "phone": "4343543",
+      "name": "Vanya Pupkin",
+      "username": "vanya",
+      "password": "123456"
+    },
+    {
+      "name": "Ivan Ivanov",
+      "phone": "13534543534",
+      "id": 4
+    },
+    {
+      "name": "Sergei Sidorov",
+      "phone": "4398759832",
+      "id": 5
+    },
+    {
+      "username": "fgh",
+      "phone": "",
+      "password": "",
+      "email": "",
+      "credit_card": "",
+      "gender": "",
+      "bio": "",
+      "name": "",
+      "id": 6
+    },
+    {
+      "username": "sdf",
+      "phone": "+7(123)454-2323",
+      "password": "",
+      "email": "kn.kolpakov@gmail.com",
+      "credit_card": "2345 8765 6789 9786",
+      "gender": "",
+      "bio": "",
+      "name": "Kostya Kolpakov",
+      "id": 7
+    },
+    {
+      "username": "dsfdg",
+      "phone": "+7(234)234-3485",
+      "password": "qwert",
+      "email": "kn.kolpakov@gmail.com",
+      "credit_card": "4567 7363 5678 5684",
+      "gender": "",
+      "bio": "",
+      "name": "Kostya Kolpakov",
+      "id": 8
+    },
+    {
+      "username": "wewer",
+      "phone": "+7(234)678-0938",
+      "password": "",
+      "email": "wer@wed.ru",
+      "credit_card": "2349 9876 7890 9898",
+      "gender": "",
+      "bio": "",
+      "name": "",
+      "id": 9
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "name": "Mango People T-shirt",
+      "price": 52,
+      "img": "../images/Layer2.jpg",
+      "src": "../singlepage.html"
+    },
+    {
+      "id": 2,
+      "name": "Mango People T-shirt",
+      "price": 48,
+      "img": "../images/Layer3.jpg",
+      "src": "singlepage.html"
+    },
+    {
+      "id": 3,
+      "name": "Mango People T-shirt",
+      "price": 36,
+      "img": "../images/Layer4.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Mango People T-shirt",
+      "price": 67,
+      "img": "../images/Layer5.jpg"
+    },
+    {
+      "id": 5,
+      "name": "Mango People T-shirt",
+      "price": 80,
+      "img": "../images/Layer6.jpg"
+    },
+    {
+      "id": 6,
+      "name": "Mango People T-shirt",
+      "price": 54,
+      "img": "../images/Layer7.jpg"
+    },
+    {
+      "id": 7,
+      "name": "Mango People T-shirt",
+      "price": 24,
+      "img": "../images/Layer8.jpg"
+    },
+    {
+      "id": 8,
+      "name": "Mango People T-shirt",
+      "price": 73,
+      "img": "../images/Layer9.jpg"
+    }
+  ],
+  "cart": [
+    {
+      "id": 8,
+      "name": "Mango People T-shirt",
+      "price": 73,
+      "img": "../images/Layer9.jpg",
+      "quantity": 2
+    },
+    {
+      "id": 7,
+      "name": "Mango People T-shirt",
+      "price": 24,
+      "img": "../images/Layer8.jpg",
+      "quantity": 2
+    },
+    {
+      "id": 5,
+      "name": "Mango People T-shirt",
+      "price": 80,
+      "img": "../images/Layer6.jpg",
+      "quantity": 1
+    },
+    {
+      "id": 1,
+      "name": "Mango People T-shirt",
+      "price": 52,
+      "img": "../images/Layer2.jpg",
+      "src": "../singlepage.html",
+      "quantity": 2
+    },
+    {
+      "id": 3,
+      "name": "Mango People T-shirt",
+      "price": 36,
+      "img": "../images/Layer4.jpg",
+      "quantity": 5
+    },
+    {
+      "id": 2,
+      "name": "Mango People T-shirt",
+      "price": 48,
+      "img": "../images/Layer3.jpg",
+      "src": "singlepage.html",
+      "quantity": 3
+    }
+  ]
+}
