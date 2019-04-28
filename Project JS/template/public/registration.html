@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Registration</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <link rel="stylesheet" href="CSS/style.css">
+
+</head>
+
+<body>
+    <!-- Required meta tags -->
+<header>
+    <div id="app">
+        <header class="header">
+            <div class="container headerInside">
+                <div class="logo">
+                    BRAN<span>D</span>
+                </div>
+                <form class="searchWrap">
+                    <div class="searchBrowse">
+                        Browse <i class="fas fa-caret-down"></i>
+                    </div>
+                    <input placeholder="Search for Item..." type="text">
+                    <button>
+                        <i class="fas fa-search"></i>
+                    </button>
+                </form>
+                <!-- TODO CSS -->
+                <img class="headerCart" src="images/cart.png" alt="">{{quantityTotal}}
+                <button class="accountBtn">
+                    My Account
+                    <i class="fas fa-caret-down"></i>
+                </button>
+            </div>
+        </header>
+        <nav class="topNav">
+            <a href="index.html">Home</a>
+            <a href="">Man</a>
+            <a href="">Women</a>
+            <a href="">Kids</a>
+            <a href="">Accoseriese</a>
+            <a href="">Featured</a>
+            <a href="">Hot Deals </a>
+        </nav>
+        <!-- TODO CSS -->
+        <div class="panel container">
+            <cart :cart="cart"></cart>
+            <div>Общая стоимость: {{ total }} Количество товаров {{quantityTotal}}</div>
+            <!-- Сделать кнопку перехода на страницу карзины -->
+            <div>Открыть карзину</div>
+        </div>
+    </div>
+    <div class="newArrivalsWrap">
+            <div class="container newArrivals">
+                <h1>Registration</h1>
+                <nav>
+                    <a href="">Home</a>
+                    <span>/</span>
+                    <a href="">Men</a>
+                    <span>/</span>
+                    <a href="">New arrivals</a>
+                    <span>/</span>
+                    <a href="">Registration</a>
+                </nav>
+            </div>
+        </div>
+</header>
+
+<main>
+        <div id="users">
+            <div class="container">
+                
+                <div class="username">
+                    <div>
+                        <input type="text" v-model="username" key="name-input" id="username" placeholder="Login" />
+                        <div class="massage"></div>
+                    </div>
+                    <div>*</div>
+                </div>
+                <div class="name">
+                        <div>
+                            <input type="text" v-model="name" id="name" placeholder="Name" />
+                            <div class="massage"></div>
+                        </div>
+                        <div>*</div>
+                    </div>
+                <div class="email">
+                        <div>
+                            <input type="email" v-model="email" id="email" placeholder="example@site.ru" />
+                            <div class="massage"></div>
+                        </div>
+                        <div>*</div>
+                    </div>
+                <div class="phone">
+                    <div>
+                        <input type="phone" v-model="phone" id="phone" placeholder="+7(123)454-2323" />
+                        <div class="massage"></div>
+                    </div>
+                    <div>*</div>
+                </div>
+                <div class="credit-card">
+                    <div>
+                        <input type="email" v-model="credit_card" id="credit-card" placeholder="1234 5678 7865 5684" />
+                        <div class="massage"></div>
+                    </div>
+                    <div>*</div>
+                </div>
+                <div class="gender">
+                    <div>
+                        <input type="text" v-model="gender" id="gender" placeholder="M/W" />
+                        <div class="massage"></div>
+                    </div>
+                    <div>*</div>
+                </div>
+                <div class="bio">
+                        <div>
+                                <textarea name="" id="" cols="30" rows="10" v-model="bio"></textarea>
+                            <div class="massage"></div>
+                        </div>
+                        <div>*</div>
+                    </div>
+                <div class="password">
+                    <div>
+                        <input type="password" v-model="password" id="password" placeholder="Password" value="" />
+                        <div class="massage"></div>
+                    </div>
+                    <div>*</div>
+                </div>
+
+                
+                <button @click="addUsers">Add</button>
+                <registration></registration>
+            </div>
+
+        </div>
+        <div class="container offerbaner">
+                <div class="offerbanerdis">
+                    <div class="for">
+                        <div>30% <span>OFFER</span></div>
+                        <div>FOR WOMEN</div>
+                    </div>
+                    <img src="images/Layer38.jpg" alt="">
+                </div>
+                <div class="column">
+                    <div class="columnicon">
+                        <img src="images/Forma1.png" alt="">
+                        <div class="columntext">
+                            <div>Free Delivery</div>
+                            <div>Worldwide delivery on all. Authorit tively morph next-generation innov tion with extensive models.</div>
+                        </div>
+                    </div>
+        
+                    <div class="columnicon">
+                        <img src="images/Forma2.png" alt="">
+                        <div class="columntext">
+                            <div>Sales & discounts</div>
+                            <div>Worldwide delivery on all. Authorit tively morph next-generation innov tion with extensive models.</div>
+                        </div>
+                    </div>
+        
+                    <div class="columnicon">
+                        <img src="images/Forma3.png" alt="">
+                        <div class="columntext">
+                            <div>Quality assurance</div>
+                            <div>Worldwide delivery on all. Authorit tively morph next-generation innov tion with extensive models.</div>
+                        </div>
+                    </div>
+        
+                </div>
+            </div>
+            <div class="bottombanerwrapbg">
+                <div class="bottombanerwrap">
+                    <div class="container bottomBannerContent">
+                        <div class="bottomBannerSign">
+                            <img src="images/Layer40.png" alt="">
+                            <div class="bottomBannertext">
+                                <div>
+                                    “Vestibulum quis porttitor dui! Quisque viverra nunc mi, a pulvinar purus condimentum a. Aliquam condimentum mattis neque sed pretium”
+                                </div>
+                                <div>Bin Burhan</div>
+                                <div>Dhaka, Bd</div>
+                                <div class="naviform">
+                                    <a href="">
+                                        <div class="navi">
+        
+                                        </div>
+                                        <div class="navi">
+        
+                                        </div>
+                                        <div class="navi">
+        
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+        
+        
+                        <div class="subscribe">
+                            <div>subscribe</div>
+                            <div>FOR OUR NEWLETTER AND PROMOTION</div>
+                            <form class="searchWrapbottom">
+                                <input placeholder="Enter Your Email" type="text">
+                                <button>
+                                    Subscribe
+                                </button>
+        
+                            </form>
+                        </div>
+                    </div>
+        
+                </div>
+            </div>
+            <div class="container navibottom">
+                <div class="about">
+                    <div class="logo">
+                        BRAN<span>D</span>
+                    </div>
+                    <div class="abouttext">
+                        <div>
+                            Objectively transition extensive data rather than cross functional solutions. Monotonectally syndicate multidisciplinary materials before go forward benefits. Intrinsicly syndicate an expanded array of processes and cross-unit partnerships.
+                        </div>
+                        <div>
+                            Efficiently plagiarize 24/365 action items and focused infomediaries.
+                            Distinctively seize superior initiatives for wireless technologies. Dynamically optimize.
+                        </div>
+        
+                    </div>
+                </div>
+                <div class="navibottommenu">
+                    <div>COMPANY</div>
+                    <div>
+                        <a href="#">Home</a>
+                        <a href="#">Shop</a>
+                        <a href="#">About</a>
+                        <a href="#">How it wors</a>
+                        <a href="#">Contact</a>
+                    </div>
+                </div>
+                <div class="navibottommenu">
+                    <div>INFORMATION</div>
+                    <div>
+                        <a href="#">Tearms & Condition</a>
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">How to Buy</a>
+                        <a href="#">How to Sell</a>
+                        <a href="#">Promotion</a>
+                    </div>
+                </div>
+                <div class="navibottommenu">
+                    <div>SHOP CATEGORY</div>
+                    <div>
+                        <a href="#">Men</a>
+                        <a href="#">Women</a>
+                        <a href="#">Child</a>
+                        <a href="#">Apparel</a>
+                        <a href="#">Brows All</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer">
+                <div class="container footerinfo">
+                    <div>© 2017 Brand All Rights Reserved.</div>
+                    <div class="socialicons">
+                        <div class="socialicon">
+                            <a href="#">
+                                <img src="images/f.png" alt="">
+                            </a>
+                        </div>
+                        <div class="socialicon">
+                            <a href="#">
+                                <img src="images/t.png" alt="">
+                            </a>
+                        </div>
+                        <div class="socialicon">
+                            <a href="#">
+                                <img src="images/in.png" alt="">
+                            </a>
+                        </div>
+                        <div class="socialicon">
+                            <a href="#">
+                                <img src="images/p.png" alt="">
+                            </a>
+                        </div>
+                        <div class="socialicon">
+                            <a href="#">
+                                <img src="images/g.png" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+</main>      
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.min.js"></script>
+        <script src="js/script.js" defer></script>
+        <script src="js/registration.js"></script>
+        
+        <script src="js/accordion.js" defer></script>
+</body>
+
+</html>

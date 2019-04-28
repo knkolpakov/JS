@@ -1,0 +1,254 @@
+.contents{
+    display: flex;
+    justify-content: space-between;
+}
+.contents > div {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+.left-wrap{
+    width: 400px;
+    margin-right: 50px;
+}
+.leftmenubar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-left: 5px solid #ef5b70;
+    padding-left: 15px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #ebebeb;
+    margin-bottom: 20px;
+
+    div {
+        color: #6f6e6e;
+        font-size: 14px;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+
+    :hover {
+        color: #ef5b70;
+    }
+}
+
+.listmenu {
+    
+    div {
+        
+        color: #6f6e6e;
+        font-size: 14px;
+        font-weight: 400;
+        padding-left: 20px;
+        padding-bottom: 15px;
+    }
+}
+
+.topchoose {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    @media (max-width: 767.98px) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    div {
+        p {
+            color: #6f6e6e;
+            font-size: 14px;
+            font-weight: 700;
+            text-transform: uppercase;
+            padding-bottom: 10px;
+            padding-top: 15px;
+        }
+
+        div {
+
+            color: #6f6e6e;
+            font-size: 14px;
+            font-weight: 400;
+            margin-bottom: 10px;
+
+            span {
+                padding-right: 10px;
+                padding-left: 10px;
+            }
+        }
+
+    }
+}
+
+.topchoose > div {
+    width: 260px;
+}
+
+.product {}
+
+.minmax {
+    > div:first-child {
+        background-color: #f0f0f0;
+        width: 260px;
+        height: 6px;
+    }
+
+    div:last-child {
+        padding-top: 10px;
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.sort {
+    background-color: #f3f3f3;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 50px;
+
+    @media (max-width: 767.98px) {
+        height: 150px;
+        width: auto;
+    }
+}
+
+.sortby {
+
+    display: flex;
+    margin-left: 10px;
+
+    @media (max-width: 767.98px) {
+        margin-right: 10px;
+    }
+
+    div {
+        background-color: #ffffff;
+        padding: 8px;
+        border-left: 1px solid #f3f3f3;
+        color: #6f6e6e;
+        font-size: 14px;
+        font-weight: 400;
+    }
+
+    div i {
+        padding-left: 20px;
+    }
+
+    div:nth-child(3) {
+        margin-left: 10px;
+    }
+}
+
+.black {
+    background-color: #222224;
+}
+
+.columnpr {
+    height: 341px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @media (max-width: 767.98px) {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        padding-bottom: 20px;
+    }
+}
+
+.columniconpr {
+    @media (max-width: 767.98px) {
+        :nth-child(1) {
+            padding-top: 20px;
+        }
+    }
+
+    > img {
+        padding-left: 43%;
+        padding-bottom: 30px;
+    }
+}
+
+.columntextpr {
+    text-align: center;
+    color: #fbfbfb;
+    font-size: 13.97px;
+    font-weight: 300;
+
+    > div:first-child {
+        font-size: 19.96px;
+        font-weight: 700;
+        padding-bottom: 20px;
+    }
+}
+
+.numnav {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 100px;
+    align-items: center;
+
+    @media (max-width: 387px) {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 50px;
+    }
+
+    .num {
+        display: flex;
+        border: 1px solid #ebebeb;
+
+        div {
+            color: #c4c4c4;
+            font-size: 16px;
+            font-weight: 300;
+            padding: 15px;
+
+            @media (max-width: 767.98px) {
+                padding: 5px;
+            }
+        }
+
+        div:hover {
+            color: #ef5b70;
+        }
+    }
+
+    button {
+        border-color: #ef5b70;
+        background-color: #fff;
+        color: #ef5b70;
+        font-size: 16px;
+        font-weight: 300;
+        padding-left: 40px;
+        padding-right: 40px;
+
+        @media (max-width: 387px) {
+            margin-top: 20px;
+        }
+    }
+
+    button:focus {
+        outline: none;
+    }
+}
+
+
+.panel {
+    padding: 0 18px;
+    color: #212121;
+    background-color: #fff;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out;
+}
+
+.cart-list{
+    width: 120px;
+    height: 90px;
+}

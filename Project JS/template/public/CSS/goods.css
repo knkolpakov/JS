@@ -1,0 +1,94 @@
+@charset "UTF-8";
+/*Goods*/
+/* line 2, /Users/konstantinkolpakov/Desktop/Обучение/Обучение/JS/2 Курс/Проектная работа/template/public/scss/goods.scss */
+.goods {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+@media (max-width: 767.98px) {
+  /* line 2, /Users/konstantinkolpakov/Desktop/Обучение/Обучение/JS/2 Курс/Проектная работа/template/public/scss/goods.scss */
+  .goods {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+/* line 15, /Users/konstantinkolpakov/Desktop/Обучение/Обучение/JS/2 Курс/Проектная работа/template/public/scss/goods.scss */
+.item {
+  height: 360px;
+  margin-bottom: 40px;
+  transition-duration: .5s;
+}
+
+/* line 22, /Users/konstantinkolpakov/Desktop/Обучение/Обучение/JS/2 Курс/Проектная работа/template/public/scss/goods.scss */
+.item .dis {
+  color: #222222;
+  font-size: 13px;
+  font-weight: 400;
+  padding-left: 15px;
+  padding-top: 19px;
+  padding-bottom: 14px;
+}
+
+/* line 31, /Users/konstantinkolpakov/Desktop/Обучение/Обучение/JS/2 Курс/Проектная работа/template/public/scss/goods.scss */
+.item .price {
+  color: #f16d7f;
+  font-size: 16px;
+  font-weight: 700;
+  padding-left: 15px;
+}
+
+/* line 39, /Users/konstantinkolpakov/Desktop/Обучение/Обучение/JS/2 Курс/Проектная работа/template/public/scss/goods.scss */
+.item:hover {
+  box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.16);
+}
+
+/* line 44, /Users/konstantinkolpakov/Desktop/Обучение/Обучение/JS/2 Курс/Проектная работа/template/public/scss/goods.scss */
+.item:hover > .addcart {
+  opacity: 1;
+  display: flex;
+  transition-duration: 0.5s;
+}
+
+/* line 54, /Users/konstantinkolpakov/Desktop/Обучение/Обучение/JS/2 Курс/Проектная работа/template/public/scss/goods.scss */
+.addcart {
+  width: 261px;
+  position: absolute;
+  justify-content: center;
+  padding-top: 98px;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 700;
+  background-color: rgba(58, 56, 56, 0.83);
+  padding-bottom: 145px;
+  opacity: 0;
+}
+
+/* line 67, /Users/konstantinkolpakov/Desktop/Обучение/Обучение/JS/2 Курс/Проектная работа/template/public/scss/goods.scss */
+.addcart button img {
+  padding-right: 10px;
+}
+
+/* line 71, /Users/konstantinkolpakov/Desktop/Обучение/Обучение/JS/2 Курс/Проектная работа/template/public/scss/goods.scss */
+.addcart button {
+  text-decoration: none;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #ffffff;
+  box-sizing: border-box;
+  background-color: rgba(255, 255, 255, 0);
+  width: 123px;
+  height: 39px;
+  outline: none;
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=../css/goods.map */

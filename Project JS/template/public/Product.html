@@ -1,0 +1,350 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    
+    <title>Product</title>
+</head>
+
+<body>
+    
+<div id="app">
+    <header class="header">
+        <div class="container headerInside">
+            <div class="logo">
+                BRAN<span>D</span>
+            </div>
+            <form class="searchWrap">
+                <div class="searchBrowse">
+                    Browse <i class="fas fa-caret-down"></i>
+                </div>
+                <input placeholder="Search for Item..." type="text">
+                <button>
+                    <i class="fas fa-search"></i>
+                </button>
+            </form>
+
+            <!--BUTTON CART-->
+            <img class="headerCart" src="images/cart.png" alt="">{{quantityTotal}}
+
+            <button class="accountBtn">
+                My Account
+                <i class="fas fa-caret-down"></i>
+            </button>
+        </div>
+    </header>
+
+    
+
+    <nav class="topNav">
+        <a href="">Home</a>
+        <a href="">Man</a>
+        <a href="">Women</a>
+        <a href="">Kids</a>
+        <a href="">Accoseriese</a>
+        <a href="">Featured</a>
+        <a href="">Hot Deals </a>
+    </nav>
+
+    <!--CART-->
+    <div class="panel container">
+        <cart-sc :cart="cart"></cart-sc>
+        <div>Общая стоимость: {{ total }} Количество товаров {{quantityTotal}}</div>
+<!-- Сделать кнопку перехода на страницу карзины -->
+        <div><a href="shoppingcart.html">Открыть карзину</a> </div>
+        </div>
+
+    <div class="newArrivalsWrap">
+        <div class="container newArrivals">
+            <h1>New arrivals</h1>
+            <nav>
+                <a href="">Home</a>
+                <span>/</span>
+                <a href="">Men</a>
+                <span>/</span>
+                <a href="">New arrivals</a>
+            </nav>
+        </div>
+    </div>
+
+
+    <div class="container">
+
+        <div class="row contents">
+            <div class="left-wrap">
+                <div class="leftmenu">
+
+                    <div class="leftmenubar">
+                        <div>Category</div>
+                        <i class="fas fa-caret-up"></i>
+                    </div>
+                    <div class="listmenu">
+                        <div>Accessories</div>
+                        <div>Bags</div>
+                        <div>Denim</div>
+                        <div>Hoodies & Sweatshirts</div>
+                        <div>Jackets & Coats</div>
+                        <div>Pants</div>
+                        <div>Polos</div>
+                        <div>Shirts</div>
+                        <div>Shoes</div>
+                        <div>Shorts</div>
+                        <div>Sweaters & Knits</div>
+                        <div>T-Shirts</div>
+                        <div>Tanks</div>
+                    </div>
+                    <div class="leftmenubar">
+                        <div>BRAND</div>
+                        <i class="fas fa-caret-down"></i>
+                    </div>
+
+                    <div class="leftmenubar">
+                        <div>DESIGNER</div>
+                        <i class="fas fa-caret-down"></i>
+                    </div>
+
+                </div>
+            </div>
+            <div class="right-wrap">
+                <div class="topchoose">
+                    <div>
+                        <p>Trending now</p>
+                        <div>Bohemian <span>| </span> Floral <span>| </span> Lace </div>
+                        <div>
+                            Floral <span>| </span> Lace <span>| </span> Bohemian
+                        </div>
+                    </div>
+                    <div>
+                        <p>Size</p>
+                        <div>
+                            <div>
+                                <input type="checkbox"> <span>XXS</span>
+                                <input type="checkbox"> <span>XS</span>
+                                <input type="checkbox"> <span>S</span>
+                                <input type="checkbox"> <span>M</span>
+                            </div>
+                            <div>
+                                <input type="checkbox"> <span>L</span>
+                                <input type="checkbox"> <span>XL</span>
+                                <input type="checkbox"> <span>XXL</span>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div>
+                        <p>PRICE</p>
+                        <div></div>
+                        <div class="minmax">
+                            <div></div>
+                            <div>
+                                <div>$52</div>
+                                <div>$400</div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="sort">
+                    <div class="sortby">
+                        <div>Sort By</div>
+                        <div>Name <i class="fas fa-caret-down"></i></div>
+                        <div>Show</div>
+                        <div>09 <i class="fas fa-caret-down"></i></div>
+                    </div>
+                </div>
+                <!--GOODS-->
+                <div class="goods">
+                    <goods :query="filterValue" @onbuy="handleBuyClick"></goods>
+                </div>
+
+                <paginated-list :cart="cart" />
+
+                <div class="numnav">
+                    <div class="num">
+                        <div>&lt;</div>
+                        <div>1</div>
+                        <div>2</div>
+                        <div>3</div>
+                        <div>4</div>
+                        <div>5</div>
+                        <div>6</div>
+                        <div>....</div>
+                        <div>20</div>
+                        <div>&gt;</div>
+                    </div>
+                    <button>View All</button>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    <div class="black">
+        <div class="container columnpr">
+            <div class="columniconpr">
+                <img src="images/Forma1.png" alt="">
+                <div class="columntextpr">
+                    <div>Free Delivery</div>
+                    <div>Worldwide delivery on all. Authorit tively morph next-generation innov tion with extensive models.</div>
+                </div>
+            </div>
+
+            <div class="columniconpr">
+                <img src="images/Forma2.png" alt="">
+                <div class="columntextpr">
+                    <div>Sales & discounts</div>
+                    <div>Worldwide delivery on all. Authorit tively morph next-generation innov tion with extensive models.</div>
+                </div>
+            </div>
+
+            <div class="columniconpr">
+                <img src="images/Forma3.png" alt="">
+                <div class="columntextpr">
+                    <div>Quality assurance</div>
+                    <div>Worldwide delivery on all. Authorit tively morph next-generation innov tion with extensive models.</div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="bottombanerwrapbg">
+        <div class="bottombanerwrap">
+            <div class="container bottomBannerContent">
+                <div class="bottomBannerSign">
+                    <img class="subimg" src="images/Layer40.png" alt="dff">
+                    <div class="bottomBannertext">
+                        <div>
+                            “Vestibulum quis porttitor dui! Quisque viverra nunc mi, a pulvinar purus condimentum a. Aliquam condimentum mattis neque sed pretium”
+                        </div>
+                        <div>Bin Burhan</div>
+                        <div>Dhaka, Bd</div>
+                        <div class="naviform">
+                            <a href="">
+                                <div class="navi">
+
+                                </div>
+                                <div class="navi">
+
+                                </div>
+                                <div class="navi">
+
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="subscribe">
+                    <div>subscribe</div>
+                    <div>FOR OUR NEWLETTER AND PROMOTION</div>
+                    <form class="searchWrapbottom">
+                        <input placeholder="Enter Your Email" type="text">
+                        <button>
+                            Subscribe
+                        </button>
+
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="container navibottom">
+        <div class="about">
+            <div class="logo">
+                BRAN<span>D</span>
+            </div>
+            <div class="abouttext">
+                <div>
+                    Objectively transition extensive data rather than cross functional solutions. Monotonectally syndicate multidisciplinary materials before go forward benefits. Intrinsicly syndicate an expanded array of processes and cross-unit partnerships.
+                </div>
+                <div>
+                    Efficiently plagiarize 24/365 action items and focused infomediaries.
+                    Distinctively seize superior initiatives for wireless technologies. Dynamically optimize.
+                </div>
+
+            </div>
+        </div>
+        <div class="bottommenu">
+            <div class="navibottommenu">
+                <div>COMPANY</div>
+                <div>
+                    <a href="#">Home</a>
+                    <a href="#">Shop</a>
+                    <a href="#">About</a>
+                    <a href="#">How it wors</a>
+                    <a href="#">Contact</a>
+                </div>
+            </div>
+            <div class="navibottommenu">
+                <div>INFORMATION</div>
+                <div>
+                    <a href="#">Tearms & Condition</a>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">How to Buy</a>
+                    <a href="#">How to Sell</a>
+                    <a href="#">Promotion</a>
+                </div>
+            </div>
+            <div class="navibottommenu">
+                <div>SHOP CATEGORY</div>
+                <div>
+                    <a href="#">Men</a>
+                    <a href="#">Women</a>
+                    <a href="#">Child</a>
+                    <a href="#">Apparel</a>
+                    <a href="#">Brows All</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="container footerinfo">
+            <div>© 2017 Brand All Rights Reserved.</div>
+            <div class="socialicons">
+                <div class="socialicon">
+                    <a href="#">
+                        <img src="images/f.png" alt="">
+                    </a>
+                </div>
+                <div class="socialicon">
+                    <a href="#">
+                        <img src="images/t.png" alt="">
+                    </a>
+                </div>
+                <div class="socialicon">
+                    <a href="#">
+                        <img src="images/in.png" alt="">
+                    </a>
+                </div>
+                <div class="socialicon">
+                    <a href="#">
+                        <img src="images/p.png" alt="">
+                    </a>
+                </div>
+                <div class="socialicon">
+                    <a href="#">
+                        <img src="images/g.png" alt="">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+</div>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.min.js"></script>
+    <script src="js/script.js" defer></script>
+    <script src="js/accordion.js" defer></script>
+   </body>
+
+</html>
